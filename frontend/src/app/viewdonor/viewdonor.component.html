@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Blood Group</th>
+        <th>Mobile No.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let donor of donors">
+        <td>{{ donor.id }}</td>
+        <td>{{ donor.name }}</td>
+        <td>{{ donor.city }}</td>
+        <td>{{ donor.state }}</td>
+        <td>{{ donor.bloodGroup }}</td>
+        <td>{{ donor.mobileNo }}</td>
+       
+      </tr>
+    </tbody>
+  </table>
+  

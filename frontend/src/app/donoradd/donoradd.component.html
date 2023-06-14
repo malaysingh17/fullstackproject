@@ -1,0 +1,52 @@
+
+
+<h2 class="normal">ADD DONOR DETAIL HERE</h2>
+<div class="form-container">
+    <form [formGroup]="donorForm" (ngSubmit)="onSubmit()" class="form">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="id">
+        <mat-error *ngIf="donorForm.controls['id'].hasError('required')">ID is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="donorForm.controls['name'].hasError('required')">Name is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city">
+        <mat-error *ngIf="donorForm.controls['city'].hasError('required')">City is required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>State</mat-label>
+        <mat-select formControlName="state">
+          <mat-option *ngFor="let state of states" [value]="state">{{ state }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="donorForm.controls['state'].hasError('required')">State is required</mat-error>
+      </mat-form-field>
+      
+
+
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Blood Group</mat-label>
+        <mat-select formControlName="bloodGroup">
+          <mat-option *ngFor="let group of bloodGroups" [value]="group">{{ group }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="donorForm.controls['bloodGroup'].hasError('required')">Blood group is required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Mobile No.</mat-label>
+        <input matInput formControlName="mobileNo" placeholder="eg. 1234567890" >
+        <mat-error *ngIf="donorForm.controls['mobileNo'].hasError('required')">Mobile no. is required</mat-error>
+        <mat-error *ngIf="donorForm.controls['mobileNo'].hasError('pattern')">Invalid mobile no. Format should be XXXXXXXXXX.</mat-error>
+      </mat-form-field>
+  
+      <button mat-raised-button color="accent"  type="submit"  class="submit-button" class="submit-button" [disabled]="donorForm.invalid" >Add Donor</button>
+    </form>
+  </div>
+  

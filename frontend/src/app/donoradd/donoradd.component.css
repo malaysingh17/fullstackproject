@@ -1,0 +1,31 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .form-field {
+    margin-right: 16px;
+    width: 200px;
+  }
+  
+  .submit-button {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 200px;
+  }
+  .normal{
+
+    text-align: center;
+  }
+  

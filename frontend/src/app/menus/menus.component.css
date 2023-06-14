@@ -1,0 +1,26 @@
+.navbar-brand {
+    font-weight: bold;
+  }
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+  }
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-link:hover {
+    background-color: rgb(121, 231, 106);
+  }
+  .nav-link{
+      background-color: rgb(191, 202, 130);
+  }
